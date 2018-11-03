@@ -22,7 +22,7 @@ namespace DBOperations
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            con = new OleDbConnection("Provider=SqloleDb;Data Source=SERVER\\SERVER;User Id=Sa;Password=123;DataBase=ADODb");
+            con = new OleDbConnection("Provider=SqloleDb;Data Source=SERVER;User Id=Sa;Password=123;DataBase=CS4DB");
             con.Open();
             cmd = new OleDbCommand("select * from dept order by deptno",con);
             dr = cmd.ExecuteReader();

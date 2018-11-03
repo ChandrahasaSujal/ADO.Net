@@ -36,7 +36,7 @@ namespace DBOperations
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            OleDbConnection con = new OleDbConnection("Provider=SqlOleDb;User Id=sa;Password=123;Data Source=SERVER\\SERVER;Database=ADODb");
+            OleDbConnection con = new OleDbConnection("Provider=SqlOleDb;User Id=sa;Password=123;Data Source=SERVER;Database=ADODb");
             con.Open();
             MessageBox.Show(con.State.ToString());
             con.Close();
@@ -45,11 +45,16 @@ namespace DBOperations
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("User Id=sa;Password=123;Data Source=SERVER\\SERVER;Database=ADODb");
+            SqlConnection con = new SqlConnection("User Id=sa;Password=123;Data Source=SERVER;Database=ADODb");
             con.Open();
             MessageBox.Show(con.State.ToString());
             con.Close();
             MessageBox.Show(con.State.ToString());
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

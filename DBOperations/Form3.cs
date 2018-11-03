@@ -23,7 +23,7 @@ namespace DBOperations
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=Server\\Server;User Id=Sa;Password=123;Database=ADODb");
+            con = new SqlConnection("Data Source=Server;User Id=Sa;Password=123;Database=CS4DB");
             con.Open();
             cmd = new SqlCommand("select eno,ename,job,salary,Status from Employee", con);
             dr = cmd.ExecuteReader();
